@@ -73,4 +73,27 @@ iframe {
   max-width: 1240px;
   padding: 0 30px;
   margin: 0 auto;
+
+  background: linear-gradient(111deg, #1f1f1d 18.53%, #000 76.33%);
+}
+
+#rec669182486 {
+  background: linear-gradient(111deg, #1f1f1d 18.53%, #000 76.33%);
+}
+
+.myButton {
+  max-width: 460px !important;
+  padding: 14px 28px !important;
+  color: #aaaaaa !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  background-color: #2a2a2a !important;
+  font-size: 26px !important;
+  border-radius: 32px;
+}
+
+.text-color {
+  background: linear-gradient(100deg, #fff 20.04%, rgba(255, 255, 255, 0) 137.28%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
