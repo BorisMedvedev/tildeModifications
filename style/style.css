@@ -106,7 +106,7 @@ iframe {
 
 .uc-scroll.active {
   animation: changeBackground 1s ease-in-out;
-  background: #E94545;
+  background: #e94545;
 }
 
 @keyframes changeBackground {
@@ -114,6 +114,27 @@ iframe {
     background: linear-gradient(111deg, #1f1f1d 18.53%, #000 76.33%);
   }
   to {
-    background: #E94545;
+    background: #e94545;
   }
+}
+
+.btn-after {
+  transition: background 0.3s;
+}
+.btn-after .tn-atom {
+  padding-right: 15px;
+}
+
+.btn-after::after {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 33px;
+  display: block;
+  content: "";
+  width: 11px;
+  height: 11px;
+  background-image: url("https://static.tildacdn.com/tild3739-3635-4538-b336-386166373566/Polygon_7.svg");
+  background-position: center;
+  background-repeat: no-repeat;
 }
