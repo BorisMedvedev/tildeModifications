@@ -32,3 +32,19 @@ document.addEventListener('DOMContentLoaded', () => {
     window.location.href = 'новая_страница.html';
   });
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  window.addEventListener('scroll', () => {
+    const block = document.querySelector('.uc-scroll');
+    const blockRect = block.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+    const windowMiddle = windowHeight / 2;
+
+    if (blockRect.top <= windowMiddle && blockRect.bottom >= windowMiddle) {
+      block.classList.add('active');
+    } else {
+      block.classList.remove('active');
+    }
+  });
+});

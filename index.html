@@ -47,8 +47,33 @@
            </code>
         </pre>
    </code>
+    <code class="language-javascript">
+      <pre class="language-html">
+        <code>
+            &lt;script&gt;
+              const createLoader = () => {
+                const loaderWrapper = document.createElement('div');
+                const loader = document.createElement('span');
+                const app = document.body;
+                loaderWrapper.classList.add('loader-wrapper');
+                loader.classList.add('loader');
+                loaderWrapper.append(loader);
+                app.append(loaderWrapper);
+                setTimeout(() => {
+                  loaderWrapper.style.opacity = 0;
+                  setTimeout(() => {
+                    loaderWrapper.remove();
+                  }, 800);
+                }, 1500);
+                return loaderWrapper;
+              };
+              createLoader();
+            &lt;/script&gt;
+           </code>
+        </pre>
+   </code>
   </pre>
-
+  <div class="uc-scroll" style="height: 100px;">Блок</div>
   <pre>
     <code class="language-css">
       &lt;style&gt;

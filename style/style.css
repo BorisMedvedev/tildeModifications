@@ -97,3 +97,23 @@ iframe {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.uc-scroll {
+  background: linear-gradient(111deg, #1f1f1d 18.53%, #000 76.33%);
+  transition: background 1s ease-in-out;
+  animation: changeBackground 1s ease-in-out;
+}
+
+.uc-scroll.active {
+  animation: changeBackground 1s ease-in-out;
+  background: #E94545;
+}
+
+@keyframes changeBackground {
+  from {
+    background: linear-gradient(111deg, #1f1f1d 18.53%, #000 76.33%);
+  }
+  to {
+    background: #E94545;
+  }
+}
