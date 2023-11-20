@@ -138,3 +138,40 @@ iframe {
   background-position: center;
   background-repeat: no-repeat;
 }
+
+.uc-tabs-item {
+  position: absolute;
+  transform: translateX(-200%);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.5s,
+    visibility 0.5s !important;
+    
+}
+
+.uc-tabs-item.uc-tabs-item__active {
+  position: inherit;
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.tabs-btn {
+  border-radius: 30px;
+  background-color: #2a2a2a;
+}
+
+.tabs-btn.tabs-btn__active {
+  background-color: #e94545 !important;
+}
+
+@keyframes fade-in {
+  0% {
+    display: block;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

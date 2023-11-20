@@ -50,3 +50,28 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const tabsItem = document.querySelector('.uc-tabs-item');
+  const tabsBtn = document.querySelector('.tabs-btn');
+  const tabsBtns = document.querySelectorAll('.tabs-btn');
+  const tabsItems = document.querySelectorAll('.uc-tabs-item');
+  tabsBtn.classList.add('tabs-btn__active');
+  tabsItem.classList.add('uc-tabs-item__active');
+  tabsBtns.forEach((btn, indexBtn) => {
+    btn.addEventListener('click', () => {
+      tabsItems.forEach((items, indexItems) => {
+        if (indexBtn === indexItems) {
+          tabsBtns.style.animation = 'fade-in 1s forwards';
+          tabsBtns[indexItems].classList.add('tabs-btn__active');
+          items.classList.add('uc-tabs-item__active');
+        } else {
+          tabsBtns[indexItems].classList.remove('tabs-btn__active');
+          items.classList.remove('uc-tabs-item__active');
+        }
+      });
+    });
+  });
+});
+
