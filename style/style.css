@@ -164,6 +164,11 @@ iframe {
 
 .tabs-btn.tabs-btn__active {
   background-color: #e94545 !important;
+  border: 1px solid #5e5e5e;
+  border-radius: 32px;
+  cursor: pointer;
+  overflow-y: auto;
+  
 }
 
 @keyframes fade-in {
@@ -174,4 +179,6 @@ iframe {
   100% {
     opacity: 1;
   }
+
+  
 }

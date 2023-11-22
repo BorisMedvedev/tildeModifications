@@ -75,3 +75,20 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+
+document.addEventListener('DOMContentLoaded', () => {
+  const colorBg = document.getElementById('bg');
+  const loaderWrapper = document.querySelector('.loader-wrapper');
+
+  colorBg.addEventListener('change', () => {
+    loaderWrapper.style.backgroundColor = `${colorBg.value}`;
+  });
+
+
+  const colorInput = document.getElementById('color');
+  const loader = document.querySelector('.loader');
+
+  colorInput.addEventListener('change', () => {
+    loader.style.color = `${colorInput.value}`;
+  });
+});
