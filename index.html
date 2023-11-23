@@ -22,9 +22,9 @@
 <body>
 
   <pre>
-    <code class="language-javascript">
+    <code class="language-html">
       <pre class="language-html">
-        <code>
+        <code class="box">
             &lt;script&gt;
               const createLoader = () => {
                 const loaderWrapper = document.createElement('div');
@@ -46,116 +46,18 @@
             &lt;/script&gt;
            </code>
         </pre>
-  </code>
-  <code class="language-javascript">
-      <pre class="language-html">
-        <code>
-            &lt;script&gt;
-              const createLoader = () => {
-                const loaderWrapper = document.createElement('div');
-                const loader = document.createElement('span');
-                const app = document.body;
-                loaderWrapper.classList.add('loader-wrapper');
-                loader.classList.add('loader');
-                loaderWrapper.append(loader);
-                app.append(loaderWrapper);
-                setTimeout(() => {
-                  loaderWrapper.style.opacity = 0;
-                  setTimeout(() => {
-                    loaderWrapper.remove();
-                  }, 800);
-                }, 1500);
-                return loaderWrapper;
-              };
-              createLoader();
-            &lt;/script&gt;
-           </code>
+     </code>
+ 
   </pre>
-  </code>
-  </pre>
-  <pre>
-    <code class="language-css">
-      &lt;style&gt;
-         .loader-wrapper {
-          display: block;
-          position: fixed;
-          top: 0;
-          right: 0;
-          left: 0;
-          bottom: 0;
-          background-color: #000000;
-          opacity: 1;
-          transition: opacity 0.5s ease;
-        }
-        
-        .loader {
-          display: block;  
-          top: 50%;
-          left: 50%;
-          transform: transition(-50%; -50%);
-          color: #ffffff;
-          font-size: 10px;
-          width: 1em;
-          height: 1em;
-          border-radius: 50%;
-          position: relative;
-          text-indent: -9999em;
-          animation: mulShdSpin 1.3s infinite linear;
-          transform: translateZ(0);
-      }
-        
-        @keyframes mulShdSpin {
-          0%,
-          100% {
-            box-shadow: 0 -3em 0 0.2em, 
-            2em -2em 0 0em, 3em 0 0 -1em, 
-            2em 2em 0 -1em, 0 3em 0 -1em, 
-            -2em 2em 0 -1em, -3em 0 0 -1em, 
-            -2em -2em 0 0;
-          }
-          12.5% {
-            box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 
-            3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, 
-            -2em 2em 0 -1em, -3em 0 0 -1em, 
-            -2em -2em 0 -1em;
-          }
-          25% {
-            box-shadow: 0 -3em 0 -0.5em, 
-            2em -2em 0 0, 3em 0 0 0.2em, 
-            2em 2em 0 0, 0 3em 0 -1em, 
-            -2em 2em 0 -1em, -3em 0 0 -1em, 
-            -2em -2em 0 -1em;
-          }
-          37.5% {
-            box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em,
-            3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em, 
-            -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
-          }
-          50% {
-            box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em,
-            3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em, 
-            -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
-          }
-          62.5% {
-            box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em,
-            3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, 
-            -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
-          }
-          75% {
-            box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 
-            3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, 
-            -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
-          }
-          87.5% {
-            box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 
-            3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, 
-            -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
-          }
-        }
-                
-     &lt;/style&gt;
-  </code>
-</pre>
+
+
+  <label for="bg" style='color:#fff; display: block;'>Сменить цвет фона для
+    теста</label>
+  <input id="bg" type="color" value="#2d2d2d">
+
+  <label for="color" style='color:#fff; display: block;'>Сменить цвет
+    прелоадера для теста</label>
+  <input id="color" type="color" value="#E94545">
 
 
 </body>
